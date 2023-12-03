@@ -1,28 +1,28 @@
 # Remote Docsify
 
-This site, which is built using [Docsify](https://docsify.js.org) and based on the [Docsify Open Publishing Starter Kit Remote template](https://github.com/hibbitts-design/docsify-open-publishing-starter-kit-remote), provides a quick way to render and share a remote Markdown file as a standalone page.
+This site, which is built using [Docsify](https://docsify.js.org) and based on the [Docsify Open Publishing Starter Kit Remote template](https://github.com/hibbitts-design/demo-docsify-open-publishing-starter-kit-remote), provides a quick way to render and share a remote Markdown file as a standalone page.
 
 ## Examples
 
-* [Docsify Open Publishing Starter Kit README file](https://github.com/hibbitts-design/docsify-open-course-starter-kit/blob/main/README.md), displayed as a [Standalone Page](https://hibbitts-design.github.io/docsify-open-publishing-starter-kit-remote?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&standalone=true)
-* [Docsify Open Publishing Starter Kit README file](https://github.com/hibbitts-design/docsify-open-course-starter-kit/blob/main/README.md), displayed as a [Standalone Page with a Table of Contents](https://hibbitts-design.github.io/docsify-open-publishing-starter-kit-remote?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&standalone=true&toc=true)
-* [Single Page Docsify Open Course Starter Kit](https://github.com/paulhibbitts/cpt-363-user-interface-design/blob/main/README.md), displayed as a [Standalone Page with a Table of Contents](https://hibbitts-design.github.io/docsify-open-publishing-starter-kit-remote?basePath=https://raw.githubusercontent.com/paulhibbitts/cpt-363-user-interface-design/main/&toc=true#/)
+* [Docsify Open Publishing Starter Kit README file](https://github.com/hibbitts-design/docsify-open-course-starter-kit/blob/main/README.md), displayed as a [Standalone Page](https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit-remote?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&standalone=true)
+* [Docsify Open Publishing Starter Kit README file](https://github.com/hibbitts-design/docsify-open-course-starter-kit/blob/main/README.md), displayed as a [Standalone Page with a Table of Contents](https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit-remote?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main&standalone=true&toc=true)
+* [Single Page Docsify Open Course Starter Kit](https://github.com/paulhibbitts/cpt-363-user-interface-design/blob/main/README.md), displayed as a [Standalone Page with a Table of Contents](https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit-remote?basePath=https://raw.githubusercontent.com/paulhibbitts/cpt-363-user-interface-design/main/&toc=true#/)
 
 ## Technical Details
 
-This is a customized [Docsify Open Publishing Starter Kit](https://github.com/hibbitts-design/docsify-open-publishing-starter-kit) site configured to render remote Markdown files via URL parameters in the format `https://hibbitts-design.github.io/docsify-open-publishing-starter-kit-remote?basePath=URLpath&homepage=filename.md`. The **basepath** parameter is the directory containing the raw source Markdown file to render. If the file is named the expected default **README.md** then no other parameter are required, otherwise the **homepage** parameter must also be included set to the name of the file to render. To render a file stored on GitHub you need to use the raw source URL of a file (i.e. raw.githubusercontent.com), tap the **Raw** button when [viewing a file](https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file) to get this URL.  
+This is a customized [Docsify Open Publishing Starter Kit](https://github.com/hibbitts-design/docsify-open-publishing-starter-kit) site configured to render remote Markdown files via URL parameters in the format `https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit-remote?basePath=URLpath&homepage=filename.md`. The **basepath** parameter is the directory containing the raw source Markdown file to render. If the file is named the expected default **README.md** then no other parameter are required, otherwise the **homepage** parameter must also be included set to the name of the file to render. To render a file stored on GitHub you need to use the raw source URL of a file (i.e. raw.githubusercontent.com), tap the **Raw** button when [viewing a file](https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file) to get this URL.  
 
 For example, to render the Markdown file **[README.md](https://github.com/hibbitts-design/docsify-open-course-starter-kit/blob/main/README.md)** (the expected default name) as a standalone page the URL would be:  
-https://hibbitts-design.github.io/docsify-open-publishing-starter-kit-remote/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit-remote/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/
 
 To render the Markdown file **[README.md](https://github.com/hibbitts-design/docsify-open-course-starter-kit/blob/main/README.md)** (the expected default name) as a standalone page with a table of contents the URL would be:  
-https://hibbitts-design.github.io/docsify-open-publishing-starter-kit-remote/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/&toc=true
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit-remote/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main/&toc=true
 
 To render the Markdown file **[introduction.md](https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/docs/introduction.md)** as a standalone page, the URL would be:  
-https://hibbitts-design.github.io/docsify-open-publishing-starter-kit-remote/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit-remote/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md
 
 To render the Markdown file **[introduction.md](https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/docs/introduction.md)** as a standalone page with a table of contents, the URL would be:  
-https://hibbitts-design.github.io/docsify-open-publishing-starter-kit-remote/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&toc=true
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit-remote/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&toc=true
 
 _TIP: To get the path of a file on GitHub for the **basepath** URL parameter, tap the **Raw** button when viewing the file and then remove the filename. If not a README file, the filename will need to be passed using the **homepage** URL parameter._
 
