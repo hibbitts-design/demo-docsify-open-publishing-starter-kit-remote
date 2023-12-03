@@ -108,7 +108,7 @@
     var editThisPageLinkText = 'Edit this Page';
 
     // Set standalone to true to permanently hide the Sidebar and Navbar
-    var standalone = false;
+    var standalone = !(getURLParameterByName('sidebar'));
 
     // Set ToC to true to permanently show page Table of Contents (Sidebar and Navbar must also be hidden)
     var ToC = false;
@@ -163,7 +163,7 @@
       // -----------------------------------------------------------------
       name: 'Docsify Open Publishing Starter Kit',
       // repo           : 'https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/',
-      homepage: 'home.md',
+      homepage: 'README.md',
       // coverpage      : '_coverpage.md',
       loadSidebar: !(getURLParameterByName(['standalone', 'embedded']) || standalone || false),
       loadNavbar: !(getURLParameterByName(['standalone', 'embedded']) && !(getURLParameterByName('navbar')) || standalone && !navbar ||false),
@@ -368,6 +368,26 @@
       ]
     }
 
+    <!-- Credit to Beau Shaw for dymamic remote docsify technique —>
+    <!-- To render a Markdown file named ** README.md ** (the expected default name) the URL would be https://hibbitts-design.github.io/test-docsify-project-docs/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main —>
+    if (getURLParameterByName('basePath')) {
+      const params = new URLSearchParams(window.location.search);
+      params.forEach((value, key) => {
+        window.$docsify[key] = convertToBoolean(value);
+      });
+    }
+
+    // Convert to Boolean if true or false, otherwise return original value
+    function convertToBoolean(value) {
+      if (value === 'true') {
+        return true;
+      } else if (value === 'false') {
+        return false;
+      } else {
+        return value;
+      }
+    }
+    
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
