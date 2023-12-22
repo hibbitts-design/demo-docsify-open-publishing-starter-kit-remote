@@ -312,6 +312,14 @@
   width: 50%;
 }
 
+.markdown-section .column img {
+  padding-top: .35rem;
+}
+
+.markdown-section .reverse-columns .column {
+  float: right;
+}
+
 .markdown-section .row:after {
   content: "";
   display: table;
