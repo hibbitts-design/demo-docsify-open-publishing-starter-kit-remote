@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Open Education Essentials</title>
+  <title>Docsify Open Publishing Starter Kit</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Open Education Essentials">
+  <meta name="description" content="Docsify Open Publishing Starter Kit">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/favicon/favicon.png">
 
@@ -161,7 +161,7 @@
     window.$docsify = {
       // GENERAL SETTINGS
       // -----------------------------------------------------------------
-      name: 'Open Education Essentials',
+      name: 'Docsify Open Publishing Starter Kit',
       homepage: 'README.md',
       loadSidebar: !(getURLParameterByName(['standalone', 'embedded']) || standalone || false),
       loadNavbar: !(getURLParameterByName(['standalone', 'embedded']) && !(getURLParameterByName('navbar')) || standalone && !navbar || false),
@@ -414,6 +414,33 @@
       ]
     }
 
+    <!-- Credit to Beau Shaw for dymamic remote docsify technique —>
+    <!-- To render a Markdown file named ** README.md ** (the expected default name) the URL would be https://hibbitts-design.github.io/test-docsify-project-docs/?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-course-starter-kit/main —>
+    if (getURLParameterByName('basePath')) {
+      const params = new URLSearchParams(window.location.search);
+      params.forEach((value, key) => {
+        // Handle nested properties like 'themeable.responsiveTables'
+        if (key.includes('.')) {
+          const [parent, child] = key.split('.');
+          window.$docsify[parent] = window.$docsify[parent] || {};
+          window.$docsify[parent][child] = convertToBoolean(value);
+        } else {
+          window.$docsify[key] = convertToBoolean(value);
+        }
+      });
+    }
+
+    // Convert to Boolean if true or false, otherwise return original value
+    function convertToBoolean(value) {
+      if (value === 'true') {
+        return true;
+      } else if (value === 'false') {
+        return false;
+      } else {
+        return value;
+      }
+    }
+    
   </script>
 
   <!-- Docsify v5 release -->
