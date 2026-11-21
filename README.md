@@ -2,18 +2,47 @@
 
 [![Docsify](https://img.shields.io/npm/v/docsify?label=docsify)](https://docsify.js.org/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/blob/main/LICENSE)
+
 <a href="https://discord.gg/zT8eS8ZG">
     <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Docsify Discord Chat" />
 </a>
 
-> This is a starter kit to quickly create Markdown-based article, tutorial, portfolio and documentation websites with the site generator [Docsify](https://docsify.js.org). Global navigation elements can be hidden for seamlessly embedding pages into other platforms or shared as standalone pages. Includes an optional "Edit this Page" link.
+> This is a starter kit to quickly create Markdown-based open guides, as well as article, tutorial and documentation websites, with the site generator [Docsify](https://docsify.js.org)  (v5 Preview). Its example guide, Open Education Essentials, is the same guide as in [Grav Open Publishing Space](https://github.com/hibbitts-design/grav-skeleton-open-publishing-space). Global navigation elements can be hidden for seamlessly embedding pages into other platforms or shared as standalone pages. Includes an optional "Edit this Page" link.
 
 Docsify sites use client-side rendering, which means your content will not be indexed by search engines like Google, Bing, or DuckDuckGo.
 
 📸 Docsify Open Publishing Screenshots
 ---
-![ Docsify Open Publishing Starter Kit](https://raw.githubusercontent.com/paulhibbitts/github-repo-images/master/smartmockups_l3dl0det.png)
-_Figure 1. Docsify Open Publishing Starter Kit. Explore a demo at [hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/](https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/)_
+![ Docsify Open Publishing Starter Kit](https://raw.githubusercontent.com/paulhibbitts/github-repo-images/master/smartmockups_lzlzt08w.png)
+_Figure 1. The original version of the Docsify Open Publishing Starter Kit, before its example guide. Explore a demo at [hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/](https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/)_
+
+📚 The Example Guide
+---
+- `docs/home.md` – the guide's home page: its cover, Start Reading button and a card for each section
+- `docs/what-is-open-education/`, `docs/tools-for-open-course-design/` and the other section folders – each with its `README.md` (the section's first page) and its other pages
+- `docs/_sidebar.md` – the reading order, with collapsible section groups (Previous/Next and the ← → keys follow it)
+
+To make it your own:
+
+1. Edit `docs/home.md` with your guide's cover and its section cards
+2. Replace the section folders with your own, and list their pages in `docs/_sidebar.md` (links start from the `docs` folder)
+3. Set your site's name – see **Setting the Name of your Docsify Site** below
+
+To add a section:
+
+1. Add a folder for it in `docs`, with a `README.md` and its other pages
+2. List them in `docs/_sidebar.md`, under the section's name
+3. Add a card for it to `docs/home.md` – copy one of the cards and change its picture, title, link and text
+
+A few tips:
+
+- Pictures go in the same folder as the page that shows them, and an italic line right below a picture works as its caption
+- Learning Objectives and other boxes are callouts, such as `> [!TIP]` – there's also `[!NOTE]`, `[!IMPORTANT]`, `[!WARNING]` and `[!CAUTION]`
+- The home page hides the sidebar with the `<style>` line at its end – copy that line to any other page that isn't part of the reading order
+- Returning readers see a **Continue reading** link on the home page, to the last page they read – remove the Keep My Place line in `docs/index.html` to turn it off
+
+> [!NOTE]
+> For a site with more than one guide, see the [multiple guides example](https://github.com/hibbitts-design/demo-docsify-open-publishing-starter-kit-guides), with a Guides page and a Sample Guide.
 
 🚀 GitHub Pages Quickstart
 ---
@@ -109,40 +138,42 @@ To optionally show a page Table of Contents (based on included Headers), use the
 `?embedded=true&toc=true`
 
 Example Docsify page displaying only page content:  
-https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/introduction?embedding=true  
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/what-is-open-education/a-spectrum-of-openness?embedding=true  
 
 Example Docsify page displaying only page content with a page Table of Contents included:  
-https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/introduction?embedding=true&toc=true  
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/what-is-open-education/a-spectrum-of-openness?embedding=true&toc=true  
 
 To optionally override the hiding of the navbar when displaying only page content, use the following:
 
 `?embedded=true&navbar=true`
 
 Example Docsify page displaying only page content:  
-https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/introduction?embedded=true  
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/what-is-open-education/a-spectrum-of-openness?embedded=true  
 
 Example Docsify page displaying only page content with the navbar still displayed:  
-https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/introduction?embedded=true&navbar=true  
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/what-is-open-education/a-spectrum-of-openness?embedded=true&navbar=true  
 
 To optionally hide the 'Edit this Page' link, use the following:
 
 `?embedded=true&hidegitlink=true`
 
 Example Docsify page displaying only page content:  
-https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/introduction?embedding=true  
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/what-is-open-education/a-spectrum-of-openness?embedding=true  
 
 Example Docsify page displaying only page content with the 'Edit this Page' link hidden:  
-https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/introduction?embedding=true&hidegitlink=true  
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/what-is-open-education/a-spectrum-of-openness?embedding=true&hidegitlink=true  
 
 To optionally show the footer ('_footer.md' file), use the following:
 
 `?embedded=true&footer=true`
 
 Example Docsify page without footer:  
-https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/introduction?embedded=true  
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/?embedded=true  
 
 Example Docsify page with footer shown:  
-https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/introduction?embedded=true&footer=true  
+https://hibbitts-design.github.io/demo-docsify-open-publishing-starter-kit/#/?embedded=true&footer=true  
+
+The footer is read from the page's own folder, so in a site with folders, such as the example guide's sections, each folder needs its own copy of `_footer.md` for the footer to show on its pages.
 
 🖼 Presenting your Docsify Page Content as Standalone Webpages
 ---  
@@ -165,8 +196,8 @@ Please note a page must have a series of Headings (#, ##, ###) for the Table of 
 ---  
 
 1. Open the `index.html` file for editing.
-2. Locate the line `<title>Docsify Open Publishing Starter Kit</title>` and change the text between the title tags to be displayed as the site name on the Browser tab
-3. Locate the line `name: 'Docsify Open Publishing Starter Kit',` and change the text between the quotes to be displayed as the site name at the top of the Docsify Sidebar
+2. Locate the line `<title>Open Education Essentials</title>` and change the text between the title tags to be displayed as the site name on the Browser tab
+3. Locate the line `name: 'Open Education Essentials',` and change the text between the quotes to be displayed as the site name at the top of the Docsify Sidebar
 4. Save the `index.html` file and reload site.
 
 📚 Docsify and Markdown Resources
@@ -174,10 +205,6 @@ Please note a page must have a series of Headings (#, ##, ###) for the Table of 
 **Docsify**  
 [Docsify Documentation](https://docsify.js.org/#/?id=docsifyg)  
 [Docsify Basics by MichaelCurrin](https://michaelcurrin.github.io/docsify-js-tutorial/#/?id=docsify-basics)  
-
-**Docsify Themable**  
-[Docsify Themeable Documentation](https://jhildenbiddle.github.io/docsify-themeable/#/introduction)  
-[Docsify Themeable GitHub](https://github.com/jhildenbiddle/docsify-themeable)  
 
 **Markdown**  
 [Markdown Here Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)  
@@ -233,6 +260,36 @@ function test() {
 </details>
 
 </div>
+```
+
+`announcement`  
+When the Docsify v5 theme is enabled, to style Blockquotes similarly to the default Docsify-This style.  
+
+```html
+<blockquote class="announcement">
+  <h2>What’s Happening This Week</h2>
+  <h3>How to explore the problem space?</h3>
+  <h4>Important Reminders</h4>
+  <ul>
+    <li><a href="#">Journey Map</a> assignment <span class='badge'> Tue Jun 12th 11:59pm PDT</span></li>
+    <li><a href="#">Course Reflection Log</a> assignment <span class='badge'> Fri Aug 3rd 11:59pm PDT</span></li>
+  </ul>
+
+  <h4>Required Reading</h4>
+  <ul>
+    <li>
+      <a href="https://www.smashingmagazine.com/2014/10/the-skeptics-guide-to-low-fidelity-prototyping/">
+        The Skeptic’s Guide To Low-Fidelity Prototyping
+      </a>
+    </li>
+  </ul>
+
+  <p>
+    <a href="https://canvas.sfu.ca/courses/44038/quizzes/166553" class="button primary">
+      Required Reading Quiz due Jun 4th
+    </a>
+  </p>
+</blockquote>
 ```
 
 `badge`  
@@ -328,6 +385,84 @@ function test() {
 
  [Read More](# ":class=navpill")
     
+ </div>
+</div>
+```
+
+`card-list-guides` / `card-list-courses` / `card-list-sections` (three cards in a row, for a list of guides, a list of courses or a guide's sections; for just two cards, use `card-list`)
+
+```html
+<div class="card-list-guides">
+ <div class="card">
+
+ ![First Guide](images/example.jpg)
+
+ ## [First Guide](#)
+
+ A short guide to getting started.
+
+ </div>
+ <div class="card">
+
+ ![Second Guide](images/example.jpg)
+
+ ## [Second Guide](#)
+
+ Another guide.
+
+ </div>
+ <div class="card">
+
+ ![Third Guide](images/example.jpg)
+
+ ## [Third Guide](#)
+
+ One more guide.
+
+ </div>
+</div>
+```
+
+`card-list-rows` (one card per row, for cards without images, such as a guide's sections)
+
+```html
+<div class="card-list-rows">
+ <div class="card">
+
+ ## [First Section](#)
+
+ A short description of this section.
+
+ </div>
+ <div class="card">
+
+ ## [Second Section](#)
+
+ </div>
+</div>
+```
+
+`card-lines-2` / `card-lines-3` (add to any card list to trim each card's text to two or three lines)
+
+```html
+<div class="card-list card-lines-2">
+ <div class="card">
+
+ ![First Guide](images/example.jpg)
+
+ ## [First Guide](#)
+
+ A short guide to getting started.
+
+ </div>
+ <div class="card">
+
+ ![Second Guide](images/example.jpg)
+
+ ## [Second Guide](#)
+
+ A longer description, trimmed to two lines so the cards stay a similar size.
+
  </div>
 </div>
 ```
@@ -542,7 +677,7 @@ Markdown:
 [Required Reading Quiz due Jun 4th](https://canvas.sfu.ca/courses/44038/quizzes/166553 ':class=mybutton')
 ```
 
-[Docsify Themeable CSS settings](https://jhildenbiddle.github.io/docsify-themeable/#/customization?id=base) can also be configured, as seen in the examples provided in the default `custom.css` file.
+Docsify theme settings can also be configured, as seen in the examples provided in the default `custom.css` file.
 
 CSS:  
 ```css
@@ -582,5 +717,4 @@ _Video 1. Generating Documentation Sites with GitHub and Docsify - Alysson Alvar
 
 🙇‍Credits and Special Thanks
 ---
-[Docsify Themeable](https://github.com/jhildenbiddle/docsify-themeable)  
-[Beau Shaw](https://github.com/DaddyWarbucks) for his [Remote Docsify](https://github.com/DaddyWarbucks/remote-docsify) example.  
+All past and current Docsify.js.org maintainers and contributors.
